@@ -27,7 +27,8 @@
 out
 gen
 .gradle/
+target
 .idea/
-chatita.iml
+
 build/
 src/test/
