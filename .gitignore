@@ -1,0 +1,33 @@
+# Windows shortcuts
+*.lnk
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.gradle/
+.idea/
+chatita.iml
+build/
+src/test/
