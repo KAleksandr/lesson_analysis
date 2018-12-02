@@ -26,8 +26,7 @@ public class TemplateComplete {
     public static void fillTemplateText(Lesson lesson) throws IOException {
         disableWarning();
 
-//        LocalDate localDate = LocalDate.now();
-//        FileInputStream inputStream = new FileInputStream(FILE);
+
         InputStream inputStream = TemplateComplete.class.getResourceAsStream(FILE);
 
         WordTemplate template = new WordTemplate();
@@ -50,13 +49,11 @@ public class TemplateComplete {
         properties.put("#{conclusion}", lesson.getComponens().getConclusion());
         properties.put("#{recommendations}", lesson.getComponens().getRecommendations());
 
-
         properties.put("#{author}", "Create by Oleksandr Kuzmenko");
 
 
         XWPFDocument document = template.extractTemplate(inputStream, properties);
 
-//        FileOutputStream outputStream = new FileOutputStream("src/main/resources/analysisLesson.docx");
         //Create a folder if it is not
         Path path = Paths.get("lesson");
         if (!Files.exists(path)) {
@@ -64,7 +61,7 @@ public class TemplateComplete {
         }
         String out = new SimpleDateFormat( "yyyy-MM-dd hh-mm-ss'.docx'").format(new Date());
         FileOutputStream outputStream = new FileOutputStream("lesson/analysisLesson" + out);
-        java.util.logging.Logger.getGlobal().info("Successful! Template Complete. ");
+
         document.write(outputStream);
         java.util.logging.Logger.getGlobal().info("Successful! Template Complete. ");
 

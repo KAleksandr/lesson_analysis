@@ -5,18 +5,16 @@ import entity.Lesson;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import word.template.TemplateComplete;
-import word.template.WordValidator;
+import word.template.WordTransformer;
 
 import java.io.IOException;
 import java.time.LocalDate;
 
 public class Controller {
-    private  static final Logger log = LoggerFactory.getLogger(LessonApp.class);
+//    private  static final Logger log = LoggerFactory.getLogger(LessonApp.class);
     private Lesson lesson;
-    private WordValidator wordValidator;
+    private WordTransformer wordTransformer;
 
     @FXML private DatePicker date;
     @FXML private TextField group;
@@ -45,20 +43,20 @@ public class Controller {
             date.setValue(LocalDate.now());
         }
 
-        wordValidator = new WordValidator();
+        wordTransformer = new WordTransformer();
 
         //Fiil componens
         Componens componens = new Componens();
-        componens.setTypeLesson(wordValidator.converterWord(typeLesson.getText(), 1));
-        componens.setOrganizagionLesson(wordValidator.converterWord(organizationLesson.getText(), 2));
-        componens.setEducationActivity(wordValidator.converterWord(educationActivity.getText(), 3));
-        componens.setEducationProcess(wordValidator.converterWord(educationProcess.getText(), 4));
-        componens.setMethodsLearning(wordValidator.converterWord(methodsLearning.getText(),5));
-        componens.setPrinciplesOfLearning(wordValidator.converterWord(principlesOfLearning.getText(),6));
-        componens.setToolsLearning(wordValidator.converterWord(toolsLearning.getText(), 7));
-        componens.setTypicalDisadvantages(wordValidator.converterWord(typicalDisadvantages.getText(),8));
-        componens.setConclusion(wordValidator.converterWord(conclusion.getText(), 9));
-        componens.setRecommendations(wordValidator.converterWord(recommendations.getText(), 10));
+        componens.setTypeLesson(wordTransformer.changeTheNumbersToText(typeLesson.getText(), 1));
+        componens.setOrganizagionLesson(wordTransformer.changeTheNumbersToText(organizationLesson.getText(), 2));
+        componens.setEducationActivity(wordTransformer.changeTheNumbersToText(educationActivity.getText(), 3));
+        componens.setEducationProcess(wordTransformer.changeTheNumbersToText(educationProcess.getText(), 4));
+        componens.setMethodsLearning(wordTransformer.changeTheNumbersToText(methodsLearning.getText(),5));
+        componens.setPrinciplesOfLearning(wordTransformer.changeTheNumbersToText(principlesOfLearning.getText(),6));
+        componens.setToolsLearning(wordTransformer.changeTheNumbersToText(toolsLearning.getText(), 7));
+        componens.setTypicalDisadvantages(wordTransformer.changeTheNumbersToText(typicalDisadvantages.getText(),8));
+        componens.setConclusion(wordTransformer.changeTheNumbersToText(conclusion.getText(), 9));
+        componens.setRecommendations(wordTransformer.changeTheNumbersToText(recommendations.getText(), 10));
 
         lesson = new Lesson(date.getValue().toString(),
                 group.getText(),

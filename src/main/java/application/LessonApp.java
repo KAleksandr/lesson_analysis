@@ -1,13 +1,13 @@
 package application;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class LessonApp extends Application {
@@ -19,7 +19,7 @@ public class LessonApp extends Application {
 
 
 
-        log.info("Starting lesson analysis application");
+//        log.info("Starting lesson analysis application");
 
 
         String fxmlFile = "/fxml/lesson.fxml";

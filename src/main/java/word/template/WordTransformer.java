@@ -4,19 +4,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordValidator {
-
+public class WordTransformer {
+    private static final String FILE_PATH ="/data/data.txt";
     private WordGenerate wordGenerate;
 
     {
         try {
-            wordGenerate = new WordGenerate("/data/data.txt");
+            wordGenerate = new WordGenerate(FILE_PATH);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public String converterWord(String numbersStr, int id){
+    public String changeTheNumbersToText(String numbersStr, int id){
 
         if(numbersStr.isEmpty() || numbersStr == null){
             return "";

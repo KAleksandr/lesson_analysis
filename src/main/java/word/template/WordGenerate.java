@@ -21,7 +21,6 @@ public class WordGenerate {
 
         InputStream inputStream = WordGenerate.class.getResourceAsStream(fileWithData);
         try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
-//                new FileInputStream(fileWithData), "UTF-8"))){
                 inputStream, "UTF-8"))){
             String line;
             while ((line = bufferedReader.readLine()) != null){
