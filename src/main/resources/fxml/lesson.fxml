@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="rootPane" prefHeight="543.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="580.0" prefWidth="641.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutY="8.0" prefHeight="27.0" prefWidth="641.0" style="&#10;" text="Схема аналізу уроку" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+          <DatePicker fx:id="date" layoutX="123.0" layoutY="41.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="61.0" layoutY="50.0" text="Дата" />
+            <Label layoutX="400.0" layoutY="50.0" text="Група" />
+            <TextField fx:id="group" layoutX="457.0" layoutY="40.0" prefHeight="26.0" prefWidth="110.0" />
+            <Label layoutX="61.0" layoutY="82.0" text="Предмет" />
+            <TextField fx:id="subject" layoutX="123.0" layoutY="70.0" prefHeight="26.0" prefWidth="446.0" />
+            <Label layoutX="61.0" layoutY="112.0" text="ПІБ вчителя" />
+            <TextField fx:id="fullName" layoutX="150.0" layoutY="100.0" prefHeight="26.0" prefWidth="418.0" />
+            <Label layoutX="61.0" layoutY="141.0" text="Тема уроку" />
+            <TextField fx:id="themeOfTheLesson" layoutX="188.0" layoutY="129.0" prefHeight="26.0" prefWidth="383.0" />
+          <Label layoutX="61.0" layoutY="171.0" text="Мета відвідування" />
+          <TextField fx:id="purposeOfTheLesson" layoutX="188.0" layoutY="159.0" prefHeight="26.0" prefWidth="383.0" />
+
+          <Separator layoutX="61.0" layoutY="195.0" prefHeight="0.0" prefWidth="512.0" />
+            <Label layoutX="63.0" layoutY="205.0" style="-fx-font-weight: bold;" text="Аналіз уроку за компонентами" />
+            <Label layoutX="400.0" layoutY="206.0" prefHeight="18.0" prefWidth="174.0" style="-fx-font-weight: bold;" text="Числові коди" />
+            <Label layoutX="61.0" layoutY="231.0" text="За типами уроку" />
+            <Label layoutX="61.0" layoutY="259.0" text="Зовнішня організація уроку" />
+            <Label layoutX="61.0" layoutY="287.0" text="За організацією навчальної діяльності" />
+            <Label layoutX="62.0" layoutY="315.0" text="За формами організації навчального процесу" />
+            <Label layoutX="61.0" layoutY="343.0" text="За методами навчання" />
+            <Label layoutX="61.0" layoutY="371.0" text="За принципами навчання" />
+            <Label layoutX="61.0" layoutY="399.0" text="За використанням засобів навчання" />
+            <Label layoutX="61.0" layoutY="427.0" text="Типові недоліки" />
+            <Label layoutX="61.0" layoutY="455.0" text="Загальний висновок" />
+            <Label layoutX="61.0" layoutY="483.0" text="Рекомендації" />
+            <TextField fx:id="typeLesson" layoutX="400.0" layoutY="224.0" prefHeight="16.0" prefWidth="173.0" promptText="1 - 13" />
+            <TextField fx:id="organizationLesson" layoutX="400.0" layoutY="251.0" prefHeight="16.0" prefWidth="173.0" promptText="14 - 39" />
+            <TextField fx:id="educationActivity" layoutX="400.0" layoutY="278.0" prefHeight="16.0" prefWidth="173.0" promptText="40 - 65" />
+            <TextField fx:id="educationProcess" layoutX="400.0" layoutY="305.0" prefHeight="16.0" prefWidth="173.0" promptText="66 - 72" />
+            <TextField fx:id="methodsLearning" layoutX="400.0" layoutY="332.0" prefHeight="16.0" prefWidth="173.0" promptText="73 -107" />
+            <TextField fx:id="principlesOfLearning" layoutX="400.0" layoutY="359.0" prefHeight="16.0" prefWidth="173.0" promptText="108 - 129" />
+            <TextField fx:id="toolsLearning" layoutX="400.0" layoutY="386.0" prefHeight="16.0" prefWidth="173.0" promptText="130 -140" />
+            <TextField fx:id="typicalDisadvantages" layoutX="400.0" layoutY="413.0" prefHeight="16.0" prefWidth="173.0" promptText="141 -239" />
+            <TextField fx:id="conclusion" layoutX="400.0" layoutY="440.0" prefHeight="16.0" prefWidth="173.0" promptText="241 -285" />
+            <TextField fx:id="recommendations" layoutX="400.0" layoutY="467.0" prefHeight="16.0" prefWidth="173.0" promptText="287 -320" />
+            <Button id="create" layoutX="400.0" layoutY="502.0" mnemonicParsing="false" onAction="#fillComponent" prefHeight="32.0" prefWidth="174.0" styleClass="create" text="Створити" />
+
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
