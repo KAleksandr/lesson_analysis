@@ -106,7 +106,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>main.Main</mainClass>
+                            <mainClass>application.LessonApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

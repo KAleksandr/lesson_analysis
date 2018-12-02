@@ -10,7 +10,7 @@ public class WordValidator {
 
     {
         try {
-            wordGenerate = new WordGenerate("src/main/resources/data/data.txt");
+            wordGenerate = new WordGenerate("/data/data.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }

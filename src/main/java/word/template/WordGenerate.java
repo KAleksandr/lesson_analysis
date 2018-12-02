@@ -1,8 +1,8 @@
 package word.template;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.List;
@@ -18,8 +18,11 @@ public class WordGenerate {
 
 
     public WordGenerate(String fileWithData) throws IOException {
+
+        InputStream inputStream = WordGenerate.class.getResourceAsStream(fileWithData);
         try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
-                new FileInputStream(fileWithData), "UTF-8"))){
+//                new FileInputStream(fileWithData), "UTF-8"))){
+                inputStream, "UTF-8"))){
             String line;
             while ((line = bufferedReader.readLine()) != null){
                 if (line.matches(NUMBER_WITH_DOT)){

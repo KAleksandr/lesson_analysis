@@ -7,7 +7,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import word.template.FillTemplate;
+import word.template.TemplateComplete;
 import word.template.WordValidator;
 
 import java.io.IOException;
@@ -67,11 +67,11 @@ public class Controller {
                 themeOfTheLesson.getText(),
                 purposeOfTheLesson.getText(),
                 componens);
-        log.info(lesson.toString());
-        java.util.logging.Logger.getGlobal().info("Fill class");
-        java.util.logging.Logger.getGlobal().info(lesson.toString());
-
-        FillTemplate.fillTemplateText(lesson);
+//        log.info(lesson.toString());
+//        java.util.logging.Logger.getGlobal().info("Fill class");
+//        java.util.logging.Logger.getGlobal().info(lesson.toString());
+        java.util.logging.Logger.getGlobal().info("Successful! Template Complete. ");
+        TemplateComplete.fillTemplateText(lesson);
 
     }
 }

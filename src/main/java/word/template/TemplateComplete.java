@@ -3,21 +3,21 @@ package word.template;
 
 import entity.Lesson;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FillTemplate {
-    private static final String FILE = "src/main/resources/template/template.docx";
+public class TemplateComplete {
+    private static final String FILE = "/template/template.docx";
 
     public static void disableWarning() {
         System.err.close();
@@ -27,7 +27,8 @@ public class FillTemplate {
         disableWarning();
 
 //        LocalDate localDate = LocalDate.now();
-        FileInputStream inputStream = new FileInputStream(FILE);
+//        FileInputStream inputStream = new FileInputStream(FILE);
+        InputStream inputStream = TemplateComplete.class.getResourceAsStream(FILE);
 
         WordTemplate template = new WordTemplate();
         Map<String, String> properties = new HashMap<>();
@@ -63,9 +64,9 @@ public class FillTemplate {
         }
         String out = new SimpleDateFormat( "yyyy-MM-dd hh-mm-ss'.docx'").format(new Date());
         FileOutputStream outputStream = new FileOutputStream("lesson/analysisLesson" + out);
-
+        java.util.logging.Logger.getGlobal().info("Successful! Template Complete. ");
         document.write(outputStream);
-        java.util.logging.Logger.getGlobal().info("Created full template. Successful.");
+        java.util.logging.Logger.getGlobal().info("Successful! Template Complete. ");
 
     }
 }
