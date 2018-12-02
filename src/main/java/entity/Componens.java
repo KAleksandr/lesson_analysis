@@ -14,15 +14,15 @@ public class Componens {
 
 
     public Componens() {
-        this.typeLesson = "";
-        this.organizationLesson = "";
-        this.educationActivity = "";
-        this.educationProcess = "";
-        this.methodsLearning = "";
-        this.principlesOfLearning = "";
-        this.toolsLearning = "";
-        this.typicalDisadvantages = "";
-        this.conclusion = "";
+        this.typeLesson = " ";
+        this.organizationLesson = " ";
+        this.educationActivity = " ";
+        this.educationProcess = " ";
+        this.methodsLearning = " ";
+        this.principlesOfLearning = " ";
+        this.toolsLearning = " ";
+        this.typicalDisadvantages = " ";
+        this.conclusion = " ";
 
     }
 
@@ -112,6 +112,18 @@ public class Componens {
 
     public void setConclusion(String conclusion) {
         this.conclusion = conclusion;
+    }
+
+    public void setOrganizationLesson(String organizationLesson) {
+        this.organizationLesson = organizationLesson;
+    }
+
+    public String getRecommendations() {
+        return recommendations;
+    }
+
+    public void setRecommendations(String recommendations) {
+        this.recommendations = recommendations;
     }
 
     @Override

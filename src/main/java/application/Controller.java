@@ -7,12 +7,14 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import word.template.WordValidator;
 
 import java.time.LocalDate;
 
 public class Controller {
     private  static final Logger log = LoggerFactory.getLogger(LessonApp.class);
     private Lesson lesson;
+    private WordValidator wordValidator;
 
     @FXML private DatePicker date;
     @FXML private TextField group;
@@ -36,15 +38,26 @@ public class Controller {
 
 
     public void fillComponent(){
-
+        // if date = null fill LocaleDate.now
         if (date.getValue() == null){
             date.setValue(LocalDate.now());
         }
 
-        Componens componens = new Componens(typeLesson.getText(), organizationLesson.getText(),
-                educationActivity.getText(), educationProcess.getText(),methodsLearning.getText(),
-                principlesOfLearning.getText(), toolsLearning.getText(), typicalDisadvantages.getText(),
-                conclusion.getText(), recommendations.getText());
+        wordValidator = new WordValidator();
+
+
+        Componens componens = new Componens();
+        componens.setTypeLesson(wordValidator.converterWord(typeLesson.getText(), 1));
+        componens.setOrganizagionLesson(wordValidator.converterWord(organizationLesson.getText(), 2));
+        componens.setEducationActivity(wordValidator.converterWord(educationActivity.getText(), 3));
+        componens.setEducationProcess(wordValidator.converterWord(educationProcess.getText(), 4));
+        componens.setMethodsLearning(wordValidator.converterWord(methodsLearning.getText(),5));
+        componens.setPrinciplesOfLearning(wordValidator.converterWord(principlesOfLearning.getText(),6));
+        componens.setToolsLearning(wordValidator.converterWord(toolsLearning.getText(), 7));
+        componens.setTypicalDisadvantages(wordValidator.converterWord(typicalDisadvantages.getText(),8));
+        componens.setConclusion(wordValidator.converterWord(conclusion.getText(), 9));
+        componens.setRecommendations(wordValidator.converterWord(recommendations.getText(), 10));
+
         lesson = new Lesson(date.getValue().toString(),
                 group.getText(),
                 subject.getText(),
