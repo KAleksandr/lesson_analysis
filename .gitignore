@@ -19,7 +19,7 @@
 *.ear
 *.zip
 *.tar.gz
-*.rar
+
 
 # IntelliJ project files
 .idea
