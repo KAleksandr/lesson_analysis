@@ -6,17 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+
 
 
 public class LessonApp extends Application {
 
-    private  static final  Logger log = LoggerFactory.getLogger(LessonApp.class);
+//    private  static final  Logger log = LoggerFactory.getLogger(LessonApp.class);
 
     @Override
     public void start(Stage stage) throws Exception {
-
 
 
 //        log.info("Starting lesson analysis application");
