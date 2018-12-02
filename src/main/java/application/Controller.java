@@ -7,8 +7,10 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import word.template.FillTemplate;
 import word.template.WordValidator;
 
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class Controller {
@@ -37,7 +39,7 @@ public class Controller {
 
 
 
-    public void fillComponent(){
+    public void fillComponent() throws IOException {
         // if date = null fill LocaleDate.now
         if (date.getValue() == null){
             date.setValue(LocalDate.now());
@@ -45,7 +47,7 @@ public class Controller {
 
         wordValidator = new WordValidator();
 
-
+        //Fiil componens
         Componens componens = new Componens();
         componens.setTypeLesson(wordValidator.converterWord(typeLesson.getText(), 1));
         componens.setOrganizagionLesson(wordValidator.converterWord(organizationLesson.getText(), 2));
@@ -68,5 +70,8 @@ public class Controller {
         log.info(lesson.toString());
         java.util.logging.Logger.getGlobal().info("Fill class");
         java.util.logging.Logger.getGlobal().info(lesson.toString());
+
+        FillTemplate.fillTemplateText(lesson);
+
     }
 }

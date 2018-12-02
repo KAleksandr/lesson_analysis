@@ -82,12 +82,12 @@ public class Lesson {
     public String toString() {
         return "Lesson{" +
                 "data='" + date + '\'' +
-                ", group='" + group + '\'' +
-                ", subject='" + subject + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", themeOfTheLesson='" + themeOfTheLesson + '\'' +
-                ", purposeOfTheLesson='" + purposeOfTheLesson + '\'' +
-                ", componens=" + componens +
+                ", \ngroup='" + group + '\'' +
+                ", \nsubject='" + subject + '\'' +
+                ", \nfullName='" + fullName + '\'' +
+                ", \nthemeOfTheLesson='" + themeOfTheLesson + '\'' +
+                ", \npurposeOfTheLesson='" + purposeOfTheLesson + '\'' +
+                ", \n"+ componens +
                 '}';
     }
 }

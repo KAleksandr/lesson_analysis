@@ -14,15 +14,15 @@ public class Componens {
 
 
     public Componens() {
-        this.typeLesson = " ";
-        this.organizationLesson = " ";
-        this.educationActivity = " ";
-        this.educationProcess = " ";
-        this.methodsLearning = " ";
-        this.principlesOfLearning = " ";
+        this.typeLesson = "";
+        this.organizationLesson = "";
+        this.educationActivity = "";
+        this.educationProcess = "";
+        this.methodsLearning = "";
+        this.principlesOfLearning = "";
         this.toolsLearning = " ";
-        this.typicalDisadvantages = " ";
-        this.conclusion = " ";
+        this.typicalDisadvantages = "";
+        this.conclusion = "";
 
     }
 
@@ -130,15 +130,15 @@ public class Componens {
     public String   toString() {
         return "\n"+"Componens{" +
                 "typeLesson='" + typeLesson + '\'' +
-                ", organizationLesson='" + organizationLesson + '\'' +
-                ", educationActivity='" + educationActivity + '\'' +
-                ", educationProcess='" + educationProcess + '\'' +
-                ", methodsLearning='" + methodsLearning + '\'' +
-                ", principlesOfLearning='" + principlesOfLearning + '\'' +
-                ", toolsLearning='" + toolsLearning + '\'' +
-                ", typicalDisadvantages='" + typicalDisadvantages + '\'' +
-                ", conclusion='" + conclusion + '\'' +
-                ", recommendations='" + recommendations + '\'' +
+                ", \norganizationLesson='" + organizationLesson + '\'' +
+                ", \neducationActivity='" + educationActivity + '\'' +
+                ", \neducationProcess='" + educationProcess + '\'' +
+                ", \nmethodsLearning='" + methodsLearning + '\'' +
+                ", \nprinciplesOfLearning='" + principlesOfLearning + '\'' +
+                ", \ntoolsLearning='" + toolsLearning + '\'' +
+                ", \ntypicalDisadvantages='" + typicalDisadvantages + '\'' +
+                ", \nconclusion='" + conclusion + '\'' +
+                ", \nrecommendations='" + recommendations + '\'' +
                 '}';
     }
 }
