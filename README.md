@@ -25,5 +25,6 @@
 ### Графічний інтерфейс програми: ###
 На даних зображеннях наведено приклад роботи програми:
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/lesson_analysis.png)
+Результатом роботи програми є створений файл-шаблон.
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/analysisLesson.jpg)
 
