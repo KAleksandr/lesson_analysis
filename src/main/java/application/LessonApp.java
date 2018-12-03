@@ -8,8 +8,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
-
-
 public class LessonApp extends Application {
 
 //    private  static final  Logger log = LoggerFactory.getLogger(LessonApp.class);
@@ -19,7 +17,11 @@ public class LessonApp extends Application {
 
 
 //        log.info("Starting lesson analysis application");
-
+//        InputStream input = this.getClass().getResourceAsStream("/images/clear.png");
+//
+//        Image image = new Image(input);
+//
+//        ImageView clear = new ImageView(image);
 
         String fxmlFile = "/fxml/lesson.fxml";
 
@@ -29,16 +31,18 @@ public class LessonApp extends Application {
         Scene scene = new Scene(parent, 635,600);
         scene.getStylesheets().add("/styles/styles.css");
 
+
         stage.setTitle("Lesson analysis");
         stage.setResizable(false);
         stage.getIcons().add(
                 new Image(this.getClass().getResourceAsStream("/images/lesson.png")));
         stage.setScene(scene);
 
+
+
+
+
         stage.show();
     }
-    public static void main(String[] args) {
 
-        launch(args);
-    }
 }

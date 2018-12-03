@@ -86,7 +86,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>application.LessonApp</mainClass>
+                            <mainClass>main.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

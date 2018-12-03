@@ -7,6 +7,7 @@
 ### Початок роботи ###
 1. Завантажити архів з програмою: https://github.com/KAleksandr/lesson_analysis/raw/master/src/main/resources/app/lesson_analysis.rar
 2. Розархівувати завантажений архів
+3. Завантажити та встановити Sun Java JRE (Якщо не встановлено!) https://java.com/ru/download/ 
 3. Запустити *start.bat*(Windows), для інших систем lesson_analysis.jar
 
 ### Загальні відомості про програму: ###
