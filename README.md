@@ -1,6 +1,7 @@
 # lesson-analysis
 Програма для оптимізації аналізу відвіданого уроку.
 
+Ідея: Лебідь Тетяна Миколаївна (lebtannik@ukr.net)
 (c) Над створенням програми працював: Кузьменко Олександр (okuzmenkoa@gmail.com)
 
 ### Початок роботи ###
@@ -27,7 +28,7 @@
 
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/lesson_analysis.png)
 
-#### Результатом роботи програми є створений файл-шаблон.
+#### Результатом роботи програми є створений файл "Схема аналізу уроку".
 
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/analysisLesson.jpg)
 

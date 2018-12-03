@@ -25,8 +25,8 @@ public class LessonApp extends Application {
 
         FXMLLoader loader = new FXMLLoader();
 
-        Parent parent = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-        Scene scene = new Scene(parent, 641,540);
+        Parent parent =  loader.load(getClass().getResourceAsStream(fxmlFile));
+        Scene scene = new Scene(parent, 635,600);
         scene.getStylesheets().add("/styles/styles.css");
 
         stage.setTitle("Lesson analysis");

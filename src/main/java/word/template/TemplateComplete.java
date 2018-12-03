@@ -19,7 +19,7 @@ import java.util.Map;
 public class TemplateComplete {
     private static final String FILE = "/template/template.docx";
 
-    public static void disableWarning() {
+    private static void disableWarning() {
         System.err.close();
         System.setErr(System.out);
     }
@@ -38,6 +38,7 @@ public class TemplateComplete {
         properties.put("#{fullName}", lesson.getFullName());
         properties.put("#{themeOfTheLesson}", lesson.getThemeOfTheLesson());
         properties.put("#{purposeOfTheLesson}", lesson.getPurposeOfTheLesson());
+        properties.put("#{nameControl}", lesson.getNameControl());
         properties.put("#{typeLesson}", lesson.getComponens().getTypeLesson());
         properties.put("#{organizationLesson}", lesson.getComponens().getOrganizationLesson());
         properties.put("#{educationActivity}", lesson.getComponens().getEducationActivity());
@@ -48,6 +49,8 @@ public class TemplateComplete {
         properties.put("#{typicalDisadvantages}", lesson.getComponens().getTypicalDisadvantages());
         properties.put("#{conclusion}", lesson.getComponens().getConclusion());
         properties.put("#{recommendations}", lesson.getComponens().getRecommendations());
+
+
 
         properties.put("#{author}", "Create by Oleksandr Kuzmenko");
 

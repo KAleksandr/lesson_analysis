@@ -22,6 +22,7 @@ public class Controller {
     @FXML private TextField fullName;
     @FXML private TextField themeOfTheLesson;
     @FXML private TextField purposeOfTheLesson;
+    @FXML private TextField nameControl;
 
     @FXML private TextField typeLesson;
     @FXML private TextField organizationLesson;
@@ -63,12 +64,13 @@ public class Controller {
                 subject.getText(),
                 fullName.getText(),
                 themeOfTheLesson.getText(),
-                purposeOfTheLesson.getText(),
+                wordTransformer.changeTheNumbersToText(purposeOfTheLesson.getText(), 0),
+                nameControl.getText(),
                 componens);
 //        log.info(lesson.toString());
 //        java.util.logging.Logger.getGlobal().info("Fill class");
 //        java.util.logging.Logger.getGlobal().info(lesson.toString());
-        java.util.logging.Logger.getGlobal().info("Successful! Template Complete. ");
+        java.util.logging.Logger.getGlobal().info("Successful! Template Complete.");
         TemplateComplete.fillTemplateText(lesson);
 
     }

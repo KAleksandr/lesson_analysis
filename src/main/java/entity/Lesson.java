@@ -7,19 +7,21 @@ public class Lesson {
     private String fullName;
     private String themeOfTheLesson;
     private String purposeOfTheLesson;
+    private String nameControl;
     private Componens componens;
 
-    public Lesson() {
-    }
 
-    public Lesson(String date, String group, String subject, String fullName, String themeOfTheLesson, String purposeOfTheLesson, Componens componens) {
+    public Lesson(String date, String group, String subject, String fullName, String themeOfTheLesson,
+                  String purposeOfTheLesson, String nameControl, Componens componens) {
         this.date = date;
         this.group = group;
         this.subject = subject;
         this.fullName = fullName;
         this.themeOfTheLesson = themeOfTheLesson;
         this.purposeOfTheLesson = purposeOfTheLesson;
+        this.nameControl = nameControl;
         this.componens = componens;
+
     }
 
     public String getData() {
@@ -70,6 +72,22 @@ public class Lesson {
         this.purposeOfTheLesson = purposeOfTheLesson;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getNameControl() {
+        return nameControl;
+    }
+
+    public void setNameControl(String nameControl) {
+        this.nameControl = nameControl;
+    }
+
     public Componens getComponens() {
         return componens;
     }
@@ -87,6 +105,7 @@ public class Lesson {
                 ", \nfullName='" + fullName + '\'' +
                 ", \nthemeOfTheLesson='" + themeOfTheLesson + '\'' +
                 ", \npurposeOfTheLesson='" + purposeOfTheLesson + '\'' +
+                ", \nnameControl='" + nameControl +'\'' +
                 ", \n"+ componens +
                 '}';
     }
