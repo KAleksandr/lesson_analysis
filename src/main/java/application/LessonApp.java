@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 public class LessonApp extends Application {
 
+
 //    private  static final  Logger log = LoggerFactory.getLogger(LessonApp.class);
 
     @Override

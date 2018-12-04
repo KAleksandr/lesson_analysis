@@ -12,9 +12,13 @@ import word.template.WordTransformer;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Controller {
     //    private  static final Logger log = LoggerFactory.getLogger(LessonApp.class);
+    private ExecutorService exector = Executors.newSingleThreadExecutor();
     private Lesson lesson;
     private WordTransformer wordTransformer;
 
@@ -55,11 +59,9 @@ public class Controller {
     private TextField recommendations;
     @FXML
     private Button create;
-    @FXML
-    private Button clear;
 
 
-    public void fillComponent() throws IOException {
+    public void fillComponent()  {
 
 
         // if date = null fill LocaleDate.now
@@ -82,7 +84,7 @@ public class Controller {
         componens.setConclusion(wordTransformer.changeTheNumbersToText(conclusion.getText(), 9));
         componens.setRecommendations(wordTransformer.changeTheNumbersToText(recommendations.getText(), 10));
 
-        lesson = new Lesson(date.getValue().toString(),
+        lesson = new Lesson(date.getValue().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")),
                 group.getText(),
                 subject.getText(),
                 fullName.getText(),
@@ -93,21 +95,26 @@ public class Controller {
 
         create.setText("Створено!");
 
+        exector.submit(() -> {
+            try {
+                TemplateComplete.fillTemplateText(lesson);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
 //        alert.initOwner(dialogStage);
         alert.setTitle("Аналіз уроку");
 
 
-        alert.setHeaderText("Файл створено!");
+        alert.setHeaderText("Файл збережено в папці lesson.");
         alert.showAndWait();
         create.setText("Створити");
 //        log.info(lesson.toString());
 //        java.util.logging.Logger.getGlobal().info("Fill class");
 //        java.util.logging.Logger.getGlobal().info(lesson.toString());
         java.util.logging.Logger.getGlobal().info("Successful! Template Complete.");
-        TemplateComplete.fillTemplateText(lesson);
-
     }
 
     public void clearData() {
@@ -129,7 +136,8 @@ public class Controller {
         typicalDisadvantages.setText("");
         conclusion.setText("");
         recommendations.setText("");
-
-
     }
+
+
+
 }

@@ -49,6 +49,7 @@ public class TemplateComplete {
         properties.put("#{typicalDisadvantages}", lesson.getComponens().getTypicalDisadvantages());
         properties.put("#{conclusion}", lesson.getComponens().getConclusion());
         properties.put("#{recommendations}", lesson.getComponens().getRecommendations());
+        properties.put("#{shortName}", cutFullName(lesson.getFullName()));
 
 
 
@@ -68,5 +69,9 @@ public class TemplateComplete {
         document.write(outputStream);
         java.util.logging.Logger.getGlobal().info("Successful! Template Complete. ");
 
+    }
+    private static String cutFullName(String fullName){
+        String pattern = "(\\S+\\s)(\\S{1})\\S+\\s(\\S{1})\\S+";
+        return fullName.replaceAll(pattern, "$1$2. $3.");
     }
 }
