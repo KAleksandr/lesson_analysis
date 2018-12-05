@@ -38,10 +38,10 @@
 ####Приклад 1 ####
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/lesson_analysis.png)
 
-#### Результатом роботи програми є створений файл "Схема аналізу уроку".
+#### Результатом роботи програми є створений файл "Аналіз уроку".
 
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/analysisLesson.jpg)
-####Приклад 2 ####
+####Приклад 2 для школи####
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/lesson_analysis2.png)
 
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/analysisLesson2.jpg)
