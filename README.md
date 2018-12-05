@@ -32,14 +32,16 @@
 
 
 ### Графічний інтерфейс програми: ###
-На даних зображеннях наведено приклад роботи програми:
+На даних зображеннях наведено приклад роботи програми.
+
 Форма заповнена в цілях демонстрації роботи програми.
-####Приклад 1 з "група"
+####Приклад 1 ####
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/lesson_analysis.png)
 
 #### Результатом роботи програми є створений файл "Схема аналізу уроку".
 
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/analysisLesson.jpg)
-####Приклад 1 з "клас"
+####Приклад 2 ####
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/lesson_analysis2.png)
+
 ![Screenshot](https://raw.githubusercontent.com/KAleksandr/lesson_analysis/master/src/main/resources/images/analysisLesson2.jpg)
