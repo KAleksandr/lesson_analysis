@@ -8,8 +8,8 @@
 
 ► Такий аналіз можна зробити лише за наявності якісного програмного продукту.
 
-Ідея: Лебідь Тетяна Миколаївна (lebtannik@ukr.net)      
-(c) Над створенням програми працював: Кузьменко Олександр (okuzmenkoa@gmail.com)
+Ідея: _Лебідь Тетяна Миколаївна_ (lebtannik@ukr.net)      
+(c) Над створенням програми працював: _Кузьменко Олександр_ (okuzmenkoa@gmail.com)
 
 ### Початок роботи ###
 1. Завантажити архів з програмою: https://github.com/KAleksandr/lesson_analysis/raw/master/src/main/resources/app/lesson_analysis.rar
