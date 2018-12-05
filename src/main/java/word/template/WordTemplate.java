@@ -1,3 +1,4 @@
+
 package word.template;
 
 import org.apache.poi.xwpf.usermodel.*;
@@ -12,8 +13,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-public class WordTemplate {
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
+class WordTemplate {
 
     private InputStream load(String path){
         InputStream stream;
@@ -31,11 +35,10 @@ public class WordTemplate {
     /**
      * Extract the word template
      * @param stream inputstream to word
-     * @param properties
      * @return XWPFDocument
-     * @throws IOException
+     *
      */
-    public XWPFDocument extractTemplate(InputStream stream, Map<String, String> properties) throws IOException{
+    XWPFDocument extractTemplate(InputStream stream, Map<String, String> properties) throws IOException{
         XWPFDocument doc = new XWPFDocument(stream);
         replaceParagraphs(doc.getParagraphs(), properties);
         replaceTable(doc.getTablesIterator(), properties);
@@ -54,7 +57,7 @@ public class WordTemplate {
         }
     }
 
-    public void replaceInParagraph(XWPFParagraph paragraph, Map<String, String> properties){
+    private void replaceInParagraph(XWPFParagraph paragraph, Map<String, String> properties){
         int begin = -1;
         String text = "";
 

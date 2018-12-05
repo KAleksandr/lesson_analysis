@@ -1,3 +1,4 @@
+
 package application;
 
 import javafx.application.Application;
@@ -7,7 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
 public class LessonApp extends Application {
 
 

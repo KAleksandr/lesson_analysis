@@ -1,9 +1,13 @@
+
 package word.template;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
 public class WordTransformer {
     private static final String FILE_PATH ="/data/data.txt";
     //no data to convert

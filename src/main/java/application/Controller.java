@@ -3,10 +3,7 @@ package application;
 import entity.Componens;
 import entity.Lesson;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import word.template.TemplateComplete;
 import word.template.WordTransformer;
 
@@ -15,7 +12,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
 public class Controller {
     //    private  static final Logger log = LoggerFactory.getLogger(LessonApp.class);
     private ExecutorService exector = Executors.newSingleThreadExecutor();
@@ -59,15 +59,21 @@ public class Controller {
     private TextField recommendations;
     @FXML
     private Button create;
+    @FXML
+    private CheckBox school;
+    @FXML Label teacher;
+    @FXML Label gclass;
 
 
-    public void fillComponent()  {
+    public void fillComponent() throws IOException {
 
 
         // if date = null fill LocaleDate.now
         if (date.getValue() == null) {
             date.setValue(LocalDate.now());
         }
+
+
 
         wordTransformer = new WordTransformer();
 
@@ -91,17 +97,18 @@ public class Controller {
                 themeOfTheLesson.getText(),
                 wordTransformer.changeTheNumbersToText(purposeOfTheLesson.getText(), 0),
                 nameControl.getText(),
-                componens);
+                componens, teacher.getText(),gclass.getText());
 
+        TemplateComplete.fillTemplateText(lesson);
         create.setText("Створено!");
 
-        exector.submit(() -> {
-            try {
-                TemplateComplete.fillTemplateText(lesson);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+//        exector.submit(() -> {
+//            try {
+//                TemplateComplete.fillTemplateText(lesson);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        });
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
 //        alert.initOwner(dialogStage);
@@ -114,7 +121,8 @@ public class Controller {
 //        log.info(lesson.toString());
 //        java.util.logging.Logger.getGlobal().info("Fill class");
 //        java.util.logging.Logger.getGlobal().info(lesson.toString());
-        java.util.logging.Logger.getGlobal().info("Successful! Template Complete.");
+
+//        java.util.logging.Logger.getGlobal().info("Successful! Template Complete.");
     }
 
     public void clearData() {
@@ -138,6 +146,16 @@ public class Controller {
         recommendations.setText("");
     }
 
+public void changeLable(){
+    //CheckBox
+    if(school.isSelected()){
+        teacher.setText("ПІБ вчителя");
+        gclass.setText("Клас");
+    }else{
+        teacher.setText("ПІБ викладача");
+        gclass.setText("Група");
+    }
 
+}
 
 }

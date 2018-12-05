@@ -1,5 +1,9 @@
-package entity;
 
+package entity;
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
 public class Componens {
     private String typeLesson;
     private String organizationLesson;

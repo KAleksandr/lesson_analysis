@@ -1,5 +1,9 @@
-package entity;
 
+package entity;
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
 public class Lesson {
     private String date;
     private String group;
@@ -9,10 +13,13 @@ public class Lesson {
     private String purposeOfTheLesson;
     private String nameControl;
     private Componens componens;
+    private String teacher;
+    private String gclass;
 
 
     public Lesson(String date, String group, String subject, String fullName, String themeOfTheLesson,
-                  String purposeOfTheLesson, String nameControl, Componens componens) {
+                  String purposeOfTheLesson, String nameControl, Componens componens,
+                    String teacher, String gclass) {
         this.date = date;
         this.group = group;
         this.subject = subject;
@@ -21,7 +28,8 @@ public class Lesson {
         this.purposeOfTheLesson = purposeOfTheLesson;
         this.nameControl = nameControl;
         this.componens = componens;
-
+        this.teacher = teacher;
+        this.gclass = gclass;
     }
 
     public String getData() {
@@ -94,6 +102,22 @@ public class Lesson {
 
     public void setComponens(Componens componens) {
         this.componens = componens;
+    }
+
+    public String getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
+    }
+
+    public String getGclass() {
+        return gclass;
+    }
+
+    public void setGclass(String gclass) {
+        this.gclass = gclass;
     }
 
     @Override

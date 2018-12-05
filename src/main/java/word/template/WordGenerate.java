@@ -1,3 +1,4 @@
+
 package word.template;
 
 import java.io.BufferedReader;
@@ -7,8 +8,11 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-public class WordGenerate {
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
+class WordGenerate {
     private static final String SPREDER = " ";
     private static final String NUMBER_WITH_DOT = "\\d+\\..+";
     private static final String NUMBER = "(\\d+)\\.\\s+.+";
@@ -17,7 +21,7 @@ public class WordGenerate {
     private Map<Integer, String> numberToText = new HashMap<>();
 
 
-    public WordGenerate(String fileWithData) throws IOException {
+    WordGenerate(String fileWithData) throws IOException {
 
         InputStream inputStream = WordGenerate.class.getResourceAsStream(fileWithData);
         try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
@@ -35,7 +39,7 @@ public class WordGenerate {
             }
         }
     }
-    public String generateSentence(List<Integer> numbers){
+    String generateSentence(List<Integer> numbers){
         StringBuilder stringBuilder = new StringBuilder();
 
         for (Integer numb : numbers){

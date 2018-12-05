@@ -1,3 +1,4 @@
+
 package word.template;
 
 
@@ -15,7 +16,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
+/**
+ * @author O.Kuzmenko
+ *         Опис програми і ліцензія: https://github.com/KAleksandr/lesson_analysis
+ */
 public class TemplateComplete {
     private static final String FILE = "/template/template.docx";
 
@@ -50,8 +54,8 @@ public class TemplateComplete {
         properties.put("#{conclusion}", lesson.getComponens().getConclusion());
         properties.put("#{recommendations}", lesson.getComponens().getRecommendations());
         properties.put("#{shortName}", cutFullName(lesson.getFullName()));
-
-
+        properties.put("#{teacher}", lesson.getTeacher());
+        properties.put("#{gclass}", lesson.getGclass());
 
         properties.put("#{author}", "Create by Oleksandr Kuzmenko");
 

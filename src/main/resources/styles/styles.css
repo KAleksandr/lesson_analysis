@@ -1,20 +1,17 @@
 /* Application wide styles */
-
-/*.label {*/
-    /*-fx-font-size: 12px;*/
-    /*-fx-font-weight: bold;*/
-    /*-fx-text-fill: #333333;*/
-    /*-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );*/
-/*}*/
-.background {
-    -fx-background-color: #1d1d1d;
+#title{
+    -fx-font-size: 18px;
+    -fx-text-fill: #9f9f9f;
+    -fx-alignment: center;
+    -fx-font-weight: normal;
+}
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
-
-
-/*.button:hover{*/
-    /*-fx-base: #25ae59;*/
-/*}*/
 
 .active-button {
     -fx-padding: 5 22 5 22;
@@ -45,16 +42,6 @@
     -fx-border-radius: 0, 0;
     -fx-border-insets: 1 1 1 1, 0;
 }
-
-
-/* Component specific styles */
-/*#clear {*/
-    /*-fx-background-image: url("/images/clear.png");*/
-    /*-fx-background-size: 24 24;*/
-    /*-fx-background-repeat: no-repeat;*/
-    /*-fx-background-position:center;*/
-/*}*/
-
 
 
 /*.hello-message {*/
